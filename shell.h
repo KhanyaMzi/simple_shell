@@ -1,6 +1,7 @@
-#ifndef _SHELL_H_
-#define _SHELL_H_
+#ifndef SHELL_H
+#define SHELL_H
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -234,5 +235,11 @@ void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
+
+/* NR */
+void _prompt(void);
+void _print (const char* Mystring);
+void user_input(char*Mystring, size_t size);
+void exec_command(const char *Mystring);
 
 #endif
