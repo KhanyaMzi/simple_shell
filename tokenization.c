@@ -2,9 +2,10 @@
 #include <stdio.h>
 #include <string.h>
 
-/**check_delim - tokenization
+/**
+ * main - tokenization
  *
- * return always 0
+ * Return: Pointer of string or Null on failure
  */
 int main(void)
 {
@@ -20,5 +21,5 @@ int main(void)
 		Yinhla = strtok(NULL, delim);
 	}
 
-	return 0;
+	return (0);
 }
