@@ -1,6 +1,7 @@
-#ifndef _SHELL_H_
-#define _SHELL_H_
+#ifndef SHELL_H
+#define SHELL_H
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -88,6 +89,7 @@ typedef struct passinfo
 	char **environ;
 	int env_changed;
 	int status;
+	int check_delime;
 
 	char **cmd_buf; /* pointer to cmd ; chain buffer, for memory mangement */
 	int cmd_buf_type; /* CMD_type ||, &&, ; */
@@ -202,7 +204,9 @@ int populate_env_list(info_t *);
 /* toem_getenv.c */
 char **get_environ(info_t *);
 int _unsetenv(info_t *, char *);
-int _setenv(info_t *, char *, char *);
+int _setenv(info_t *, char *, char *)
+int _strtok(info_t *, char *);
+int check_delim(info_t *, char *);
 
 /* toem_history.c */
 char *get_history_file(info_t *info);
@@ -231,5 +235,11 @@ void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
 int replace_vars(info_t *);
 int replace_string(char **, char *);
+
+/* NR */
+void _prompt(void);
+void _print (const char *string);
+void user_input(char *string, size_t size);
+void exec_command(const char *string);
 
 #endif
