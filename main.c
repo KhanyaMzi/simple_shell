@@ -16,6 +16,6 @@ int main(void)
 		execute_command(string);
 }
 
-return 0;
+return (0)
 
 }

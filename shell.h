@@ -241,5 +241,6 @@ void _prompt(void);
 void _print (const char *string);
 void user_input(char *string, size_t size);
 void exec_command(const char *string);
+void check_delime(const char *str);
 
 #endif
