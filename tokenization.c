@@ -8,11 +8,11 @@
  */
 int main(void)
 {
-	char Mystring[] = "1st heavenly birthday";
+	char string[] = "1st heavenly birthday";
 	char *Yinhla;
 	char *delim = ",";
 
-	Yinhla = strtok(Mystring, delim);
+	Yinhla = strtok(string, delim);
 
 	while (Yinhla != NULL)
 	{

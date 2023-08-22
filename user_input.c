@@ -4,10 +4,10 @@
  *
  * return: always 0
  */
-void user_iput(char *Mystring, size_t size)
+void user_iput(char *string, size_t size)
 {
 
-	if (fgets(Mystring, size, stdin) == NULL)
+	if (fgets(string, size, stdin) == NULL)
 	{
 
 		if (feof(stdin))
@@ -24,5 +24,5 @@ void user_iput(char *Mystring, size_t size)
 		}
 	}
 
-	Mystring[strcspn(Mystring, "\n")] '\0';
+	string[str(string, "\n")] '\0';
 }

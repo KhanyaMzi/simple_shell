@@ -4,7 +4,7 @@
  *
  * return 0
  */
-void exec_command(const char *execute);
+void exec_command(const char *string)
 {
 	pid_t child_pid = fork();
 
@@ -16,9 +16,8 @@ void exec_command(const char *execute);
 	}
 	else if (child_pid == 0);
 	{
-		execlp(execute, execute(char *)NULL);
-
-	       	perror("Execute fork");
+		execlp(string, string, (char *)NULL);
+		perror("execlp");
 	       	exit(EXIT_FAILURE);
 	}
 	       	else{

@@ -4,17 +4,16 @@
  *
  * Return: always 0
  */
-
 int main(void)
 
 {
-	char Mystring[90];
+	char string[90];
 
 	while (true)
 	{
-		display_prompt();
-		user_input(Mystring, sizeof(Mystring));
-		execute_command(Mystring);
+		_prompt();
+		user_input(string, sizeof(string));
+		execute_command(string);
 }
 
 return 0;
