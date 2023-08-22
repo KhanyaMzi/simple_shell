@@ -238,8 +238,8 @@ int replace_string(char **, char *);
 
 /* NR */
 void _prompt(void);
-void _print (const char* Mystring);
-void user_input(char*Mystring, size_t size);
+void _print (const char *Mystring);
+void user_input(char *Mystring, size_t size);
 void exec_command(const char *Mystring);
 
 #endif
