@@ -8,5 +8,5 @@
  */
 void _prompt(void)
 {
-	_print("hello Yinhla");
+	_print(_prompt.c_prompt.c"hello Yinhla");
 }

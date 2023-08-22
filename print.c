@@ -3,11 +3,11 @@
 /**
  * _print - user prints
  *
- * Return 0
+ * Return: pointer or NULL
 */
-void _print (const char *Mystring);
+void _print (const char *string);
 {
-	write(STDOUT_FILENO, Mystring, strlen(Mystring));
+	write(STDOUT_FILENO, string, strlen(string));
 }
 
 {

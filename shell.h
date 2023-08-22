@@ -13,18 +13,18 @@
 #include <fcntl.h>
 #include <errno.h>
 
-/* for read/write buffers */
+/* buffers */
 #define READ_BUF_SIZE 1024
 #define WRITE_BUF_SIZE 1024
 #define BUF_FLUSH -1
 
-/* for command chaining */
+/* command*/
 #define CMD_NORM	0
 #define CMD_OR		1
 #define CMD_AND		2
 #define CMD_CHAIN	3
 
-/* for convert_number() */
+/* convert_number() */
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
@@ -33,8 +33,11 @@
 #define USE_STRTOK 0
 
 #define HIST_FILE	".simple_shell_history"
-#define HIST_MAX	4096
 
+#define HIST_MAX	4096
+/* convert_number() */
+#define CONVERT_LOWERCASE       1
+#define CONVERT_UNSIGNED        2
 extern char **environ;
 
 
@@ -222,14 +225,14 @@ size_t print_list_str(const list_t *);
 int delete_node_at_index(list_t **, unsigned int);
 void free_list(list_t **);
 
-/* toem_lists1.c */
+/* list*/
 size_t list_len(const list_t *);
 char **list_to_strings(list_t *);
 size_t print_list(const list_t *);
 list_t *node_starts_with(list_t *, char *, char);
-ssize_t get_node_index(list_t *, list_t *);
 
-/* toem_vars.c */
+/* vars*/
+ssize_t get_node_index(list_t *, list_t *);
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
 int replace_alias(info_t *);
@@ -241,6 +244,6 @@ void _prompt(void);
 void _print (const char *string);
 void user_input(char *string, size_t size);
 void exec_command(const char *string);
-void check_delime(const char *str);
+void check_delim(const char *str);
 
 #endif
