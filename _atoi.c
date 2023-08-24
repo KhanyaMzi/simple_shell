@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "shell_1.h"
 
 /**
  * interactive - function to check interactive mode
