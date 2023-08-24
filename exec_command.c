@@ -2,9 +2,9 @@
 /**
  * exec_command - to execute the command
  *
- * Return: pointer of string or NULL on Failure.
+ * Return: NULL on Failure.
  */
-void exec_command(const char *commands);
+void exec_command(const char *command);
 {
 	pid_t child_pid = fork();
 
@@ -17,7 +17,7 @@ void exec_command(const char *commands);
 	else if (child_pid == 0)
 
 	{
-		execlp(commands, commands, (char *)NULL);
+		execlp(command, command, (char *)NULL);
 
 		perror("execlp");
 		exit(EXIT_FAILURE);

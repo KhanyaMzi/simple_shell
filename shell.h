@@ -36,7 +36,7 @@ void main (void)
 void _prompt(void);
 void _print (const char *commands);
 void user_input(char *commands, size_t size);
-void exec_command(const char *commands);
+void exec_command(const char *command);
 int _pid;
 int is_chain(info_t *, char *, size_t *);
 void check_chain(info_t *, char *, size_t *, size_t, size_t);
