@@ -1,16 +1,16 @@
-#include "shell.h"
+#include <stdio.h>
+#include <unistd.h>
 
-/*
- * pid - my pid
+/**
+ * main - PID
  *
- * return: pid number
+ * Return: Always 0.
  */
 int main(void)
-
 {
-	pid_t pid;
+	pid_t my_pid;
 
-	pid = getpid();
-	write("pid = %d\n", pid);
+	my_pid = getpid();
+	printf("%u\n", my_pid);
 	return (0);
 }
