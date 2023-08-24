@@ -32,7 +32,7 @@
 #define CONVERT_LOWERCASE	1
 #define CONVERT_UNSIGNED	2
 
-
+void main (void)
 void _prompt(void);
 void _print (const char *commands);
 void user_input(char *commands, size_t size);
