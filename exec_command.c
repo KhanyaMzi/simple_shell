@@ -1,9 +1,9 @@
 #include "shell.h"
 /**
- * exec_command - to execute the command
+ * main - to execute the command
  *
  * Return: NULL on Failure.
-
+ */
 void exec_command(const char *command);
 {
 	pid_t child_pid = fork();
@@ -27,4 +27,3 @@ void exec_command(const char *command);
 		wait(NULL);
 	}
 }
-*/
